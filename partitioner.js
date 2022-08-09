@@ -1,8 +1,8 @@
 $(document).ready(function () {
     var religionList = ["شیعه", "اهل سنت", "مسیحیت", "کلیمی و ارمنی", "زرتشتی", "اهل حق", "دراویش صوفی", "بهائیت", "سایر مذاهب"];
     var religionPercent = [];
-    for (var i in religionList.length) {
-        topics.push(obj[i])
+    for (var i = 0; i < religionList.length; i++) {
+        religionPercent.push(0);
     }
     var StepNumber = 5;
     var StartNumber = 5;
@@ -61,6 +61,7 @@ $(document).ready(function () {
         $('.DropReligionPercent').empty();
         $('.DropReligionPercent').append(optionP);
 
+        $('#partitionerAddItem').css('width', (100 - sumPercent - 3) + '%');
         if (sumPercent < 100) {
             $('#partitionerAddItem').show();
         } else {
