@@ -1,4 +1,4 @@
-.partitionerCntr {
+.partitionerBox {
     border-radius: 5px;
     border: 1px solid #97c2e9;
     width: 1000px;
@@ -8,7 +8,7 @@
     height: 66px;
 }
 
-    .partitionerCntr .partitionItem {
+    .partitionerBox .partitionItem {
         float: right;
         border: solid 1px #2db301;
         background-color: #e4ffdb;
@@ -19,7 +19,7 @@
         position: relative;
     }
 
-        .partitionerCntr .partitionItem p {
+        .partitionerBox .partitionItem p {
             font-size: 12px;
             font-family: tahoma;
             direction: rtl;
@@ -27,7 +27,7 @@
             margin: 0;
         }
 
-            .partitionerCntr .partitionItem p.RemovePercent {
+            .partitionerBox .partitionItem p.RemovePercent {
                 padding: 0 3px;
                 line-height: 15px;
                 position: absolute;

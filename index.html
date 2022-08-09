@@ -1,26 +1,50 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-    <script src='partitioner.js'></script>
-    <link rel="stylesheet" href="partitioner.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="partitioner.js"></script>
+    <link rel="stylesheet" href="partitioner.css" />
+  </head>
+  <body>
     <div class="partitionerCntr">
+      <div class="partitionerBox">
         <div class="partitionItem" style="width: #ItemPercentNumber%">
-            <p>#ItemName</p>
-            <p>#ItemPercentText %</p>
-            <p class="RemovePercent" id="#ItemIndex">X</p>
+          <p>#ItemName</p>
+          <p>#ItemPercentText %</p>
+          <p class="RemovePercent" id="#itemIndex">X</p>
         </div>
-    </div>
-    <div id="partitionerAddItem">
-        <select class="DropPartitionItem"></select><br />
-        <select class="DropReligionPercent" style="width: 40px;"></select>
-        <button type="button" class="partitionerAddBtn">+</button>
+      </div>
+      <div class="partitionerAddItemCntr">
+        <div id="partitionerAddItem">
+          <select class="DropPartitionItem"></select>
+          <div>
+            <select class="DropArrayPercent" style="width: 40px"></select>
+            <button type="button" class="partitionerAddBtn">+</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-</body>
-
+    <script>
+      var param = {
+        arrayList: [
+          "شیعه",
+          "اهل سنت",
+          "مسیحیت",
+          "کلیمی و ارمنی",
+          "زرتشتی",
+          "اهل حق",
+          "دراویش صوفی",
+          "بهائیت",
+          "سایر مذاهب",
+          "شیطان پرست",
+          "جن زده",
+        ],
+        stepNumber: 5,
+        startNumber: 5,
+      };
+      $(".partitionerCntr").SetPartitioner(param);
+    </script>
+  </body>
 </html>
-
