@@ -7,28 +7,90 @@
     <link rel="stylesheet" href="partitioner.css" />
   </head>
   <body>
-    <div class="partitionerCntr">
-      <div class="partitionerBox">
-        <div class="partitionItem" style="width: #ItemPercentNumber%">
-          <p>#ItemName</p>
-          <p>#ItemPercentText %</p>
-          <p class="RemovePercent" id="#itemIndex">X</p>
+    <p class="pTitle">درصد مذاهب</p>
+    <div id="Religion" class="partitionerCntr">
+      <!-- partitioner box container -->
+      <div class="pBox"></div>
+
+      <!-- partitioner Item Template -->
+      <div class="pItemThem" style="display: none">
+        <div class="pItem newitem">
+          <p class="ItemName"></p>
+          <p class="PercentNumber"></p>
+          <p class="RemoveItem">X</p>
         </div>
       </div>
-      <div class="partitionerAddItemCntr">
-        <div id="partitionerAddItem">
-          <select class="DropPartitionItem"></select>
+
+      <!-- partitioner add item container -->
+      <div class="pAddThem" style="display: none">
+        <div class="addBox">
+          <select class="DItem"></select>
           <div>
-            <select class="DropArrayPercent" style="width: 40px"></select>
-            <button type="button" class="partitionerAddBtn">+</button>
+            <select class="DPercent" style="width: 40px"></select>
+            <button type="button" class="addBtn">+</button>
           </div>
         </div>
       </div>
     </div>
 
+    <br />
+
+    <p class="pTitle">درصد رده سنی</p>
+    <div id="Age" class="partitionerCntr">
+      <!-- partitioner box container -->
+      <div class="pBox"></div>
+
+      <!-- partitioner Item Template -->
+      <div class="pItemThem" style="display: none">
+        <div class="pItem newitem">
+          <p class="ItemName"></p>
+          <p class="PercentNumber"></p>
+          <p class="RemoveItem">X</p>
+        </div>
+      </div>
+
+      <!-- partitioner add item container -->
+      <div class="pAddThem" style="display: none">
+        <div class="addBox">
+          <select class="DItem"></select>
+          <div>
+            <select class="DPercent" style="width: 40px"></select>
+            <button type="button" class="addBtn">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <p class="pTitle">درصد مشکلات فرهنگی</p>
+    <div id="Problems" class="partitionerCntr">
+      <!-- partitioner box container -->
+      <div class="pBox"></div>
+
+      <!-- partitioner Item Template -->
+      <div class="pItemThem" style="display: none">
+        <div class="pItem newitem">
+          <p class="ItemName"></p>
+          <p class="PercentNumber"></p>
+          <p class="RemoveItem">X</p>
+        </div>
+      </div>
+
+      <!-- partitioner add item container -->
+      <div class="pAddThem" style="display: none">
+        <div class="addBox">
+          <select class="DItem"></select>
+          <div>
+            <select class="DPercent" style="width: 40px"></select>
+            <button type="button" class="addBtn">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script>
-      var param = {
-        arrayList: [
+      var ReligionParam = {
+        itemList: [
           "شیعه",
           "اهل سنت",
           "مسیحیت",
@@ -37,12 +99,42 @@
           "اهل حق",
           "دراویش صوفی",
           "بهائیت",
-          "سایر مذاهب",
+          "سایر ..",
         ],
         stepNumber: 5,
         startNumber: 5,
       };
-      $(".partitionerCntr").SetPartitioner(param);
+      $("#Religion").SetPartitioner(ReligionParam);
+
+      var AgeParam = {
+        itemList: [
+          "جنین",
+          "شیرخوار",
+          "کودک",
+          "نوجوان",
+          "جوان",
+          "میانسال",
+          "بزرگسالی",
+          "سایر ..",
+        ],
+        stepNumber: 10,
+        startNumber: 20,
+      };
+      $("#Age").SetPartitioner(AgeParam);
+
+      var ProblemsParam = {
+        itemList: [
+          "طلاق",
+          "اعتیاد",
+          "بی سوادی",
+          "سابقه زندان",
+          "بی کاری",
+          "سایر ..",
+        ],
+        stepNumber: 10,
+        startNumber: 10,
+      };
+      $("#Problems").SetPartitioner(ProblemsParam);
     </script>
   </body>
 </html>

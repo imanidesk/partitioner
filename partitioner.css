@@ -1,4 +1,13 @@
-.partitionerBox {
+.pTitle {
+    width: 1000px;
+    margin: auto;
+    direction: rtl;
+    padding: 5px;
+    font-family: tahoma;
+    font-size: 12px;
+    font-weight: bold;
+}
+.pBox {
     border-radius: 5px;
     border: 1px solid #97c2e9;
     width: 1000px;
@@ -7,8 +16,7 @@
     overflow: auto;
     height: 66px;
 }
-
-    .partitionerBox .partitionItem {
+    .pBox .pItem {
         float: right;
         border: solid 1px #2db301;
         background-color: #e4ffdb;
@@ -18,16 +26,14 @@
         border-radius: 5px;
         position: relative;
     }
-
-        .partitionerBox .partitionItem p {
+        .pBox .pItem p {
             font-size: 12px;
             font-family: tahoma;
             direction: rtl;
             line-height: 22px;
             margin: 0;
         }
-
-            .partitionerBox .partitionItem p.RemovePercent {
+         .pBox .pItem p.RemoveItem {
                 padding: 0 3px;
                 line-height: 15px;
                 position: absolute;
@@ -39,8 +45,7 @@
                 background-color: #ffdbdb;
             }
 
-
-#partitionerAddItem {
+.addBox {
     direction: rtl;
     float: right;
     border: solid 1px #2db301;
@@ -51,7 +56,7 @@
     position: relative;
 }
 
-    #partitionerAddItem select {
+    .addBox select {
         width: 70px;
         margin: 2px;
         font-size: 12px;
